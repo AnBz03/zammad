@@ -53,8 +53,8 @@ jobs:
         with:
           images: |
             ghcr.io/${{ github.repository_owner }}/zammad
-            index.docker.io/${{ github.repository_owner }}/zammad
-            index.docker.io/${{ github.repository_owner }}/zammad-docker-compose
+            index.docker.io/${{ vars.repository_owner }}/zammad
+            index.docker.io/${{ vars.repository_owner }}/zammad-docker-compose
             quay.io/${{ github.repository_owner }}/zammad
           tags: |
             type=sha,suffix=-${{ matrix.runs-on.platform }}
@@ -76,9 +76,9 @@ jobs:
       matrix:
         target:
           - image: ghcr.io/${{ github.repository_owner }}/zammad
-          - image: index.docker.io/${{ github.repository_owner }}/zammad
+          - image: index.docker.io/${{ vars.repository_owner }}/zammad
           - image: quay.io/${{ github.repository_owner }}/zammad
-          - image: index.docker.io/${{ github.repository_owner }}/zammad-docker-compose
+          - image: index.docker.io/${{ vars.repository_owner }}/zammad-docker-compose
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
