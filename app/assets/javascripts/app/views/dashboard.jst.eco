@@ -1,6 +1,6 @@
 <div class="dashboard main flex center">
   <div class="tabs tabs--big">
-    <div class="tab active" data-area="stat-widgets"><%- @T('My Stats') %></div>
+    <div class="tab active" data-area="stat-widgets"><%- @T('My Stats from jammeli') %></div>
     <div class="tab" data-area="first-steps-widgets"><%- @T('First try from anis') %></div>
   </div>
   <div class="tab-content first-steps-widgets hidden"></div>
